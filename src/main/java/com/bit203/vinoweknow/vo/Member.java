@@ -1,4 +1,4 @@
-package com.bit203.vinoweknow.model.vo;
+package com.bit203.vinoweknow.vo;
 
 import lombok.Data;
 
