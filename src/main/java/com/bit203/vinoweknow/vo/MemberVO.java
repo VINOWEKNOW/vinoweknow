@@ -10,8 +10,12 @@ public class MemberVO {
     private String memberId;
     private String memberPw;
     private String memberName;
-    private LocalDate memberBirth;
-    private String email;
-    private int age;
+    private boolean memberGender;
+    private String memberBirth;
+    private String memberAddress;
+    private int memberPhone;
+    private String memberEmail;
+    private LocalDate memberSignUp;
+    private int subscriptStatus;
     private boolean isAdmin;
 }
