@@ -17,5 +17,4 @@ public class MemberController {
     //회원 목록 조회
 
     //회원 탈퇴
-
 }
