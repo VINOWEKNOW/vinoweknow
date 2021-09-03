@@ -16,6 +16,6 @@ public class MemberVO {
     private int memberPhone;
     private String memberEmail;
     private LocalDate memberSignUp;
-    private int subscriptStatus;
+    private String subscriptStatus;
     private boolean isAdmin;
 }
