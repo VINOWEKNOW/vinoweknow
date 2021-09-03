@@ -20,6 +20,12 @@ public class MagazineVO {
     private Date knowDate;
     private char knowStatus;
     private int knowViews;
+    private int voteCode;
+    private String voteTitle;
+    private Date voteDate;
+    private int voteChoiceCode;
+    private String voteChoice;
+    private int voteChoiceCount;
 
 
 }
