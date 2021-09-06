@@ -22,5 +22,4 @@ public interface MemberDao {
 
     //회원 탈퇴/삭제
     void deleteMember(MemberVO member);
-
 }

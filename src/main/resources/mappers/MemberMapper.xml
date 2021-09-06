@@ -6,9 +6,11 @@
 <mapper namespace="com.bit.x3.model.dao.MemberDao">
     <insert id="insertMember" parameterType="Member">
         INSERT INTO MEMBER
-        VALUES (#{}, #{}, #{}, #{}, #{}, #{}, #{}, #{}, #{}, #{}, #{}, #{})
-        /*memberCode,memberId,memberPw,memberName,memberGender,memberBirth,memberAddress,memberPhone,memberEmail,memberSignup,memberStatus,isAdmin*/
-
+        VALUES (#{}, #{}, #{}, #{}, #{}, #{},
+                #{}, #{}, #{}, #{}, #{}, #{})
+        /*memberCode,memberId,memberPw,memberName,memberGender,memberBirth,
+          memberAddress,memberPhone,memberEmail,memberSignup,memberStatus,isAdmin*/
     </insert>
+
 
 </mapper>
