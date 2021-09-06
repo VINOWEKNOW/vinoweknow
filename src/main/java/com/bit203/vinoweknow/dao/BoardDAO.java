@@ -9,16 +9,17 @@ import java.util.List;
 @Mapper
 public interface BoardDAO {
 
-    @Select("select boardCode, boardName, boardWriter, boardDate, boardView, boardState from board")
-    List<BoardVO> boardList();
+    //@Select("select boardCode, boardName, boardWriter, boardDate, boardView, boardState from board")
 
-    void insertBoard(BoardVO board);
+    public List<BoardVO> selectBoardList();
 
-    void selectBoard(BoardVO board);
+    public int insertBoard(BoardVO board);
 
-    void update();
+    //void selectBoard(BoardVO board);
 
-    void delBoard();
+    public int update(BoardVO board);
+
+    public int delBoard(int boardCode);
 
 
 
