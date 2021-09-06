@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class MemberController {
 
-    @Autowired
+//    @Autowired
     private MemberDao memberDao;
 
     //회원 가입
