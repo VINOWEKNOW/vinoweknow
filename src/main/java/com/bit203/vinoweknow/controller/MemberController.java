@@ -45,7 +45,7 @@ public class MemberController {
 
     //회원 조회
     @RequestMapping("/search")
-    public int memberSearch() {
+    public int memberSearch(MemberVO member, HttpServletRequest request) {
 
         return 0;
     }

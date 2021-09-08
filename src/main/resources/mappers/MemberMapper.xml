@@ -8,9 +8,13 @@
     <insert id="insertMember" parameterType="MemberVO">
         INSERT INTO MEMBER
         VALUES (#{memberId}, #{memberPw}, #{memberName}, #{memberGender}, #{memberBirth}, #{memberAddress},
-                #{memberPhone}, #{memberEmail}, TO_CHAR(SYSDATE,'YYYY/MM/DD'), #{subscriptStatus}, #{isAdmin})
+                #{memberPhone}, #{memberEmail}, TO_CHAR(SYSDATE, 'YYYY/MM/DD'), #{subscriptStatus}, #{isAdmin})
         /*memberCode,memberId,memberPw,memberName,memberGender,memberBirth,
           memberAddress,memberPhone,memberEmail,memberSignup,memberStatus,isAdmin*/
     </insert>
+
+    <select id="searchMember" parameterType="MemberVO" resultType="MemberVO">
+
+    </select>
 
 </mapper>
