@@ -9,7 +9,7 @@ import java.util.List;
 public interface MemberDao {
 
     //회원가입
-    void insertMember(MemberVO member);
+    int insertMember(MemberVO member);
 
     //회원조회
     void selectMember(MemberVO member);

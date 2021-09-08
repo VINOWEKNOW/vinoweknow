@@ -4,13 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.bit.x3.model.dao.MemberDao">
-    <insert id="insertMember" parameterType="Member">
+
+    <insert id="insertMember" parameterType="MemberVO">
         INSERT INTO MEMBER
-        VALUES (#{}, #{}, #{}, #{}, #{}, #{},
-                #{}, #{}, #{}, #{}, #{}, #{})
+        VALUES (#{memberId}, #{memberPw}, #{memberName}, #{memberGender}, #{memberBirth}, #{memberAddress},
+                #{memberPhone}, #{memberEmail}, TO_CHAR(SYSDATE,'YYYY/MM/DD'), #{subscriptStatus}, #{isAdmin})
         /*memberCode,memberId,memberPw,memberName,memberGender,memberBirth,
           memberAddress,memberPhone,memberEmail,memberSignup,memberStatus,isAdmin*/
     </insert>
-
 
 </mapper>
