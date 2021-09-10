@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface SubscriptionDao {
 
-//   @Insert("INSERT INTO subscription(subscription_code, member_code, subscription_addr, subscription_Type, ...) VALUES(#{subscription.subCode}, #{subscription.memCode}, #{subscription.subAddr}, #{subscription.subType}, #{subscription.subPayPln}, #{subscription.subQuantity}, #{subscription.subStarDate}, #{subscription.subEndDate}, #{subscription.subProductCode})")
+   @Insert("INSERT INTO subscription(subscription_code, member_code, subscription_addr, subscription_Type, ...) VALUES(#{subscription.subCode}, #{subscription.memCode}, #{subscription.subAddr}, #{subscription.subType}, #{subscription.subPayPln}, #{subscription.subQuantity}, #{subscription.subStarDate}, #{subscription.subEndDate}, #{subscription.subProductCode})")
    int insert(@Param("subscription") Subscription subscription);
 
    @Select("SELECT * FROM subscription")

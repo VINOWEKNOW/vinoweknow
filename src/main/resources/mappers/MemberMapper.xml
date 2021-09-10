@@ -5,6 +5,7 @@
 
 <mapper namespace="com.bit.x3.model.dao.MemberDao">
 
+    <!--회원가입-->
     <insert id="insertMember" parameterType="MemberVO">
         INSERT INTO MEMBER
         VALUES (#{memberId}, #{memberPw}, #{memberName}, #{memberGender}, #{memberBirth}, #{memberAddress},
@@ -13,8 +14,24 @@
           memberAddress,memberPhone,memberEmail,memberSignup,memberStatus,isAdmin*/
     </insert>
 
+    <!--맴버 검색-->
     <select id="searchMember" parameterType="MemberVO" resultType="MemberVO">
-
+        select *
+        from MEMBER
+        where memberId = #{memberId}
     </select>
+
+    <!--맴버리스트 검색-->
+    <select id="memberListWhereObject" parameterType="MemberVO" resultType="MemberVO">
+        select *
+        from Member
+    </select>
+
+    <!--맴버삭제-->
+    <delete id="deleteMember" parameterType="MemberVO">
+        delete
+        from MEMBER
+        where memberId = #{memberId}
+    </delete>
 
 </mapper>
