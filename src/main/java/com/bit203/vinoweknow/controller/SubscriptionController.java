@@ -11,21 +11,21 @@ import java.util.List;
 
 @Controller
 public class SubscriptionController {
-
-//    @Autowired
-    private SubscriptionDao subscriptionDao;
-
-    @PostMapping("")
-    public Subscription postSubscription(@RequestBody Subscription subscription) {
-        subscriptionDao.insert(subscription);
-        return subscription;
-    }
-
-    @PostMapping("")
-    public Subscription postOrder(@RequestBody Subscription subscription) {
-        subscriptionDao.insert(subscription);
-        return subscription;
-    }
+//
+////    @Autowired
+//    private SubscriptionDao subscriptionDao;
+//
+//    @PostMapping("")
+//    public Subscription postSubscription(@RequestBody Subscription subscription) {
+//        subscriptionDao.insert(subscription);
+//        return subscription;
+//    }
+//
+//    @PostMapping("")
+//    public Subscription postOrder(@RequestBody Subscription subscription) {
+//        subscriptionDao.insert(subscription);
+//        return subscription;
+//    }
 
 
 

@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.bit.x3.model.dao.MemberDao">
+<mapper namespace="com.bit203.vinoweknow.dao.MemberDao">
 
     <!--회원가입-->
     <insert id="insertMember" parameterType="MemberVO">
@@ -22,7 +22,7 @@
     </select>
 
     <!--맴버리스트 검색-->
-    <select id="memberListWhereObject" parameterType="MemberVO" resultType="MemberVO">
+    <select id="memberList" parameterType="MemberVO" resultType="MemberVO">
         select *
         from Member
     </select>

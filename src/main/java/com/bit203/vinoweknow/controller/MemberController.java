@@ -4,13 +4,16 @@ import com.bit203.vinoweknow.dao.MemberDao;
 import com.bit203.vinoweknow.vo.MemberVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @RequestMapping("/member")
 @Slf4j
+@Controller
 public class MemberController {
 
     @Autowired
@@ -19,9 +22,8 @@ public class MemberController {
     // index
     @GetMapping("/")
     public String index() {
-        return "/index";
+        return "redirect:/main";
     }
-
 
     //회원 가입
     @RequestMapping("/join")
@@ -44,10 +46,10 @@ public class MemberController {
     }
 
     //회원 조회
-    @RequestMapping("/search")
-    public int memberSearch(MemberVO member, HttpServletRequest request) {
-
-        return 0;
+    @RequestMapping("/list")
+    public String memberSearch(MemberVO member, HttpServletRequest request) {
+        List<MemberVO> memberList = memberDao.memberList();
+        return "";
     }
 
     //회원 정보 조회
