@@ -3,12 +3,29 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.bit203.vinoweknow.dao.MagazineDao">
-    <insert id="insertNews" parameterType="Member">
-        INSERT INTO MEMBER
-        VALUES (#{}, #{}, #{}, #{}, #{}, #{}, #{}, #{}, #{}, #{}, #{}, #{})
-        /*memberCode,memberId,memberPw,memberName,memberGender,memberBirth,memberAddress,memberPhone,memberEmail,memberSignup,memberStatus,isAdmin*/
+<mapper namespace="com.bit203.vinoweknow.dao.MagazineDAO">
+    <insert id="createNews">
+        INSERT INTO WINENEWS (newsCode, newsTitle, newsWriter, newDate, newsStatus, newsViews)
+        VALUES (#{newsCode}, #{newsTitle}, #{newsWriter}, #{newsDate}, #{newsStatus}, #{newsViews})
 
     </insert>
+
+    <insert id="createKnow">
+        INSERT INTO WINEKNOW (knowCode, knowTitle, knowWriter, knowDate, knowStatus, knowViews)
+        VALUES (#{knowCode}, #{knowTitle}, #{knowWriter}, #{knowDate}, #{knowStatus}, #{knowViews})
+
+    </insert>
+
+    <select id="listNews" resultType="NewsVO" >
+        SELECT * FROM WINENEWS
+    </select>
+<!--    <insert id="createVote">-->
+
+
+<!--    </insert>-->
+
+<!--    <select id="readNews">-->
+<!--        select-->
+<!--    </select>-->
 
 </mapper>

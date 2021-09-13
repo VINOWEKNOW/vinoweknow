@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@Controller
+//@Controller
 public class SubscriptionController {
 
-    @Autowired
+//    @Autowired
     private SubscriptionDao subscriptionDao;
 
     @PostMapping("")

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazine View</title>
+</head>
+<body>
+hello
+
+<table id="newsViewTable">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th></th>
+        <th>User Status</th>
+        <th>Super User</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="news : ${newsVOList}">
+        <td th:text="${news.newsCode}">emil</td>
+        <td th:text="${news.newsTitle}">emil</td>
+        <td th:text="${news.newsCont}">emil</td>
+        <td th:text="${news.newsWriter}">emil</td>
+        <td th:text="${news.newsDate}">name</td>
+        <td th:text="${news.newsStatus}">stat</td>
+        <td th:text="${news.newsViews}">super</td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
