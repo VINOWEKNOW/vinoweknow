@@ -5,6 +5,7 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
+
 public class MemberVO {
     private int memberCode;
     private String memberId;

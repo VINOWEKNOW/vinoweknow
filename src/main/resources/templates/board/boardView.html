@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Board</title>
+</head>
+<body>
+
+<b2>HEllo Board~~</b2>
+
+<table id="boardViewTable">
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>State</th>
+        <th>Views</th>
+        <th>Writer</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="board : ${boardVOList}">
+        <td th:text="${board.boardCode}">code</td>
+        <td th:text="${board.boardName}">name</td>
+        <td th:text="${board.boardState}">stat</td>
+        <td th:text="${board.boardView}">view</td>
+        <td th:text="${board.boardWriter}">writer</td>
+        <td th:text="${board.boardDate}">date</td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
