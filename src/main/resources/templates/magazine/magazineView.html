@@ -10,21 +10,24 @@ hello
 <table id="newsViewTable">
     <thead>
     <tr>
-        <th>Title</th>
-        <th></th>
-        <th>User Status</th>
-        <th>Super User</th>
+        <th>newsCode</th>
+        <th>newsTitle</th>
+        <th>newsCont</th>
+        <th>newsWriter</th>
+        <th>newsDate</th>
+        <th>newsStatus</th>
+        <th>newsViews</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="news : ${newsVOList}">
-        <td th:text="${news.newsCode}">emil</td>
-        <td th:text="${news.newsTitle}">emil</td>
-        <td th:text="${news.newsCont}">emil</td>
-        <td th:text="${news.newsWriter}">emil</td>
-        <td th:text="${news.newsDate}">name</td>
-        <td th:text="${news.newsStatus}">stat</td>
-        <td th:text="${news.newsViews}">super</td>
+        <td th:text="${news.newsCode}">newsCode</td>
+        <td th:text="${news.newsTitle}">newsTitle</td>
+        <td th:text="${news.newsCont}">newsCont</td>
+        <td th:text="${news.newsWriter}">newsWriter</td>
+        <td th:text="${news.newsDate}">newsDate</td>
+        <td th:text="${news.newsStatus}">newsStatus</td>
+        <td th:text="${news.newsViews}">newsViews</td>
     </tr>
     </tbody>
 </table>

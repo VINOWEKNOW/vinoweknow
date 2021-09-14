@@ -9,23 +9,21 @@ import java.util.List;
 @Mapper
 public interface MagazineDAO {
 
-
+    //뉴스 리스트
     List<NewsVO> listNews();
-    //게시글 리스트
-    List<MagazineVO> listMagazine() throws Exception;
 
-    //게시글 생성
-    void createNews(MagazineVO magazineVO) throws Exception;
+    //뉴스 생성
+    void createNews(NewsVO newsVO);
 
-    void createKnow(MagazineVO magazineVO) throws  Exception;
-    //게시글 수정
-    void updateMagazine(MagazineVO magazineVO) throws Exception;
+    //뉴스 수정
+    void updateNews(NewsVO newsVO);
 
-    //게시글 삭제
-    void deleteMagazine(MagazineVO magazineVO) throws Exception;
+    //뉴스 조회
+    void readNews(NewsVO newsVO);
 
-    //게시글 조회
-    MagazineVO readNews(int newsCode) throws Exception;
-    MagazineVO readKnow(int knowCode) throws Exception;
-    MagazineVO readVote(int voteCode) throws Exception;
+    //뉴스 삭제
+    void deleteNews(NewsVO newsVO);
+
 }
+
+
