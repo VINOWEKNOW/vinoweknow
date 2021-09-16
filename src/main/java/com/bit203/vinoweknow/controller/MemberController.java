@@ -46,15 +46,21 @@ public class MemberController {
     }
 
     //회원 조회
-    @RequestMapping("/list")
-    public String memberSearch(MemberVO member, HttpServletRequest request) {
-        List<MemberVO> memberList = memberDao.memberList();
+    @RequestMapping("/meminfo")
+    public String memberInfo(MemberVO member, HttpServletRequest request) {
+
         return "";
     }
 
     //회원 정보 조회
 
     //회원 목록 조회
+    @RequestMapping("/list")
+    public String memberSearch(MemberVO member, HttpServletRequest request) {
+        List<MemberVO> memberList = memberDao.memberList();
+        return "";
+    }
 
     //회원 탈퇴
+
 }
