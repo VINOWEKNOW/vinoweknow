@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Know View</title>
+</head>
+<body>
+hello
+
+<table id="knowViewTable">
+    <thead>
+    <tr>
+        <th>knowCode</th>
+        <th>knowTitle</th>
+        <th>knowCont</th>
+        <th>knowWriter</th>
+        <th>knowDate</th>
+        <th>knowStatus</th>
+        <th>knowViews</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="know : ${knowVOList}">
+        <td th:text="${know.knowCode}">knowCode</td>
+        <td th:text="${know.knowTitle}">knowTitle</td>
+        <td th:text="${know.knowCont}">knowCont</td>
+        <td th:text="${know.knowWriter}">knowWriter</td>
+        <td th:text="${know.knowDate}">knowDate</td>
+        <td th:text="${know.knowStatus}">knowStatus</td>
+        <td th:text="${know.knowViews}">knowViews</td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

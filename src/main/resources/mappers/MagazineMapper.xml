@@ -5,19 +5,23 @@
 
 <mapper namespace="com.bit203.vinoweknow.dao.MagazineDAO">
     <insert id="createNews">
-        INSERT INTO WINENEWS (newsCode, newsTitle, newsWriter, newDate, newsStatus, newsViews)
-        VALUES (#{newsCode}, #{newsTitle}, #{newsWriter}, #{newsDate}, #{newsStatus}, #{newsViews})
+        INSERT INTO WINENEWS (newsCode, newsTitle, newsWriter, newDate, newsStatus, newsViews, memberCode)
+        VALUES (#{newsCode}, #{newsTitle}, #{newsWriter}, #{newsDate}, #{newsStatus}, #{newsViews}, #{memberCode})
 
     </insert>
 
     <insert id="createKnow">
-        INSERT INTO WINEKNOW (knowCode, knowTitle, knowWriter, knowDate, knowStatus, knowViews)
-        VALUES (#{knowCode}, #{knowTitle}, #{knowWriter}, #{knowDate}, #{knowStatus}, #{knowViews})
+        INSERT INTO WINEKNOW (knowCode, knowTitle, knowWriter, knowDate, knowStatus, knowViews, memberCode)
+        VALUES (#{knowCode}, #{knowTitle}, #{knowWriter}, #{knowDate}, #{knowStatus}, #{knowViews}, #{memberCode}s)
 
     </insert>
 
     <select id="listNews" resultType="NewsVO" >
         SELECT * FROM WINENEWS
+    </select>
+
+    <select id="listKnow" resultType="KnowVO" >
+        SELECT * FROM WINEKNOW
     </select>
 <!--    <insert id="createVote">-->
 
