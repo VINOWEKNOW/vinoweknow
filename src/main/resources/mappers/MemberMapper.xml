@@ -8,11 +8,16 @@
     <!--회원가입-->
     <insert id="insertMember" parameterType="MemberVO">
         INSERT INTO MEMBER
-        VALUES (#{memberId}, #{memberPw}, #{memberName}, #{memberGender}, #{memberBirth}, #{memberAddress},
-                #{memberPhone}, #{memberEmail}, TO_CHAR(SYSDATE, 'YYYY/MM/DD'), #{subscriptStatus}, #{isAdmin})
+        VALUES (#{memberCode}, #{memberId}, #{memberPw}, #{memberName}, #{memberGender}, #{memberBirth}, #{memberAddress,jdbcType=VARCHAR},
+                #{memberPhone,jdbcType=VARCHAR}, #{memberEmail,jdbcType=VARCHAR}, sysdate, #{subscriptStatus,jdbcType=VARCHAR}, #{isAdmin})
         /*memberCode,memberId,memberPw,memberName,memberGender,memberBirth,
           memberAddress,memberPhone,memberEmail,memberSignup,memberStatus,isAdmin*/
     </insert>
+
+    <select id="memberCount" resultType="int">
+        SELECT MAX(MEMBERCODE)
+        FROM MEMBER
+    </select>
 
     <!--맴버 검색-->
     <select id="searchMember" parameterType="MemberVO" resultType="MemberVO">

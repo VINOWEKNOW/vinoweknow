@@ -12,7 +12,7 @@ public interface WineDao {
     String insertWine(WineVO insertWine);
 
     //와인 조회
-    void selectWine(WineVO selectWine);
+    void searchWine(WineVO selectWine);
 
     //와인 리스트 조회
     List<WineVO> wineList();

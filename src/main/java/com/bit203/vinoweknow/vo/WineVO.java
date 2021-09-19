@@ -1,19 +1,25 @@
 package com.bit203.vinoweknow.vo;
 
+import lombok.Data;
+
+@Data
 public class WineVO {
 
     private String wineCode;
-    private String wineNameKr;
+    private String wineNameKo;
     private String wineNameEn;
-    private int wineVintage;
-    private int wineVolume;
-    private int winePrice;
+    private String wineVintage;
+    private String wineVolume;
+    private String winePrice;
     private String sweetness;
     private String acidity;
     private String body;
     private String tannin;
     private String wineTypeKr;
     private String wineTypeEn;
+
+    private String wineType;
+
     private String varietyKr;
     private String varietyEn;
     private String countryKr;

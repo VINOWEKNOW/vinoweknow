@@ -25,15 +25,28 @@ public class MemberController {
         return "redirect:/main";
     }
 
+    //회원가입 페이지를 리턴하는 메소드
+    @RequestMapping("/joinForm")
+    public String memberJoinForm() {
+        return "/member/joinForm";
+    }
+
     //회원 가입
     @RequestMapping("/join")
-    public int memberJoin(MemberVO member, HttpServletRequest request) {
+    public String memberJoin(MemberVO member, HttpServletRequest request) {
 
         // parameter check
         log.info("member ############################");
         log.info(request.getParameter("memberId"));
-        System.out.println("member controller ## memberJoin");
-        System.out.println(member.toString());
+        System.out.println(member);
+
+        // 현재 회원의 수 +1
+        int maxMemberCode = memberDao.memberCount();
+        System.out.println("member controller #### member count");
+        System.out.println(maxMemberCode);
+
+        member.setMemberCode(maxMemberCode+1);
+
 
         // call method(interface)
         int result = memberDao.insertMember(member);
@@ -42,7 +55,8 @@ public class MemberController {
         System.out.println(result);
         // result 0이면 성공인지, 1이면 성공인지 확인
 
-        return result;
+        // 회원가입 db insert후 메인페이지로 이동
+        return "/index";
     }
 
     //회원 조회
