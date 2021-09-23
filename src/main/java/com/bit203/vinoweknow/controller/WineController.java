@@ -17,6 +17,7 @@ public class WineController {
     private WineDao wineDao;
 
     //와인 등록
+    @RequestMapping("/wine/winereg")
     String insertWine(WineDao wineDao) {
         return "";
     }

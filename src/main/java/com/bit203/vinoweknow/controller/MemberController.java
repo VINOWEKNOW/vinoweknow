@@ -66,7 +66,7 @@ public class MemberController {
         return "";
     }
 
-    //회원 정보 조회
+    //회원 정보 수정
 
     //회원 목록 조회
     @RequestMapping("/list")
