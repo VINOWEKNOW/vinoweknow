@@ -35,6 +35,7 @@
             <div class="input-form col-md-12 mx-auto"><h4 class="mb-3">와인등록</h4>
                 <form class="validation-form" novalidate action="/member/join" method="post">
                     <div class="row">
+<!--
                         <div class="col-md-6 mb-3">와인이름(한글)<input type="text" class="form-control"
                                                                   name=""
                                                                   placeholder=""
@@ -42,8 +43,9 @@
                                                                   required>
                             <div class="invalid-feedback"> 와인이름(한글)을 입력해주세요.</div>
                         </div>
+-->
                         <div class="col-md-6 mb-3">와인이름(영문)<input type="password"
-                                                                  class=""
+                                                                  class="form-control"
                                                                   name="memberPw"
                                                                   placeholder=""
                                                                   value="" required>
@@ -68,6 +70,21 @@
                                                             required>
                             <div class="invalid-feedback">당도를 입력해주세요.</div>
                         </div>
+                        <div class="col-md-6 mb-3">산도<input type="text" class="form-control" name="memberBirth"
+                                                            placeholder=""
+                                                            required>
+                            <div class="invalid-feedback">산도를 입력해주세요.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">바디<input type="text" class="form-control" name="memberBirth"
+                                                            placeholder=""
+                                                            required>
+                            <div class="invalid-feedback">바디를 입력해주세요.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">타닌<input type="text" class="form-control" name="memberBirth"
+                                                            placeholder=""
+                                                            required>
+                            <div class="invalid-feedback">타닌을 입력해주세요.</div>
+                        </div>
                     </div>
                     <!--
                     <hr class="mb-4">
@@ -76,7 +93,7 @@
                                                 class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label></div>
                     <div class="mb-4"></div>
                     -->
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">등록 완료</button>
                 </form>
             </div>
         </div>

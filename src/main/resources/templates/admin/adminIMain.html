@@ -7,7 +7,32 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>SideBar sub menus</title>
+    <title>VINOWEKNOW</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            min-height: 100vh;
+            background: -webkit-gradient(linear, left bottom, right top, from(#92b5db), to(#1d466c));
+            background: -webkit-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
+            background: -moz-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
+            background: -o-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
+            background: linear-gradient(to top right, #92b5db 0%, #1d466c 100%);
+        }
+
+        .input-form {
+            max-width: 680px;
+            margin-top: 80px;
+            padding: 32px;
+            background: #fff;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+        }
+    </style>
 </head>
 <body id="body-pd">
     <div class="l-navbar" id="navbar">
@@ -15,7 +40,7 @@
             <div>
                 <div class="nav__brand">
                     <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <a href="#" class="nav__logo">Bedimcode</a>
+                    <a href="#" class="nav__logo">VINOWEKNOW</a>
                 </div>
                 <div class="nav__list">
                     <a href="#" class="nav__link active">
@@ -71,7 +96,88 @@
         </nav>
     </div>
 
-    <h1>Componentes</h1>
+    <!--<h1>Componentes</h1>-->
+    <div class="container">
+        <div class="input-form-backgroud row">
+            <div class="input-form col-md-12 mx-auto"><h4 class="mb-3">와인등록</h4>
+                <form class="validation-form" novalidate action="/member/join" method="post">
+                    <div class="row">
+                        <!--
+                                                <div class="col-md-6 mb-3">와인이름(한글)<input type="text" class="form-control"
+                                                                                          name=""
+                                                                                          placeholder=""
+                                                                                          value=""
+                                                                                          required>
+                                                    <div class="invalid-feedback"> 와인이름(한글)을 입력해주세요.</div>
+                                                </div>
+                        -->
+                        <div class="col-md-6 mb-3">와인이름(영문)<input type="password"
+                                                                  class="form-control"
+                                                                  name="memberPw"
+                                                                  placeholder=""
+                                                                  value="" required>
+                            <div class="invalid-feedback"> 와인이름(영문)을 입력해주세요.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">와인타입<input type="text" class="form-control" name="memberName"
+                                                              placeholder="레드일 경우, 영문 red" required>
+                            <div class="invalid-feedback">와인타입을 입력해주세요.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">가격<input type="text" class="form-control" name="memberBirth"
+                                                            placeholder=""
+                                                            required>
+                            <div class="invalid-feedback"> 가격을 입력해주세요.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">빈티지<input type="text" class="form-control" name="memberBirth"
+                                                             placeholder=""
+                                                             required>
+                            <div class="invalid-feedback">생산년도를 입력해주세요.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">당도<input type="text" class="form-control" name="memberBirth"
+                                                            placeholder=""
+                                                            required>
+                            <div class="invalid-feedback">당도를 입력해주세요.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">산도<input type="text" class="form-control" name="memberBirth"
+                                                            placeholder=""
+                                                            required>
+                            <div class="invalid-feedback">산도를 입력해주세요.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">바디<input type="text" class="form-control" name="memberBirth"
+                                                            placeholder=""
+                                                            required>
+                            <div class="invalid-feedback">바디를 입력해주세요.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">타닌<input type="text" class="form-control" name="memberBirth"
+                                                            placeholder=""
+                                                            required>
+                            <div class="invalid-feedback">타닌을 입력해주세요.</div>
+                        </div>
+                    </div>
+                    <!--
+                    <hr class="mb-4">
+                    <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input"
+                                                                                           id="aggrement" required> <label
+                                                class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label></div>
+                    <div class="mb-4"></div>
+                    -->
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">등록 완료</button>
+                </form>
+            </div>
+        </div>
+        <footer class="my-3 text-center text-small"><p class="mb-1">&copy; 2021 VINOWEKNOW</p></footer>
+    </div>
+    <script> window.addEventListener('load', () => {
+        const forms = document.getElementsByClassName('validation-form');
+        Array.prototype.filter.call(forms, (form) => {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false); </script>
     <!-- IONICONS -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <!-- JS -->
