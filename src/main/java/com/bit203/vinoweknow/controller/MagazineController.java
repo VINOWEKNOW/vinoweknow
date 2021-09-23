@@ -28,8 +28,15 @@ public class MagazineController {
 
     }
 
-    @RequestMapping("/createNews")
+    @RequestMapping("/createnews")
     public String createNews(Model model) {
+        String newsTitle = "제목";
+        String newsCont = "내용";
+        String newsWriter = "홍길동";
+
+        model.addAttribute("newsTitle", newsTitle);
+        model.addAttribute("newsCont", newsCont);
+        model.addAttribute("newsWriter", newsWriter);
         return "magazine/createNews";
     }
 
