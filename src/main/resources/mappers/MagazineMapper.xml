@@ -5,14 +5,14 @@
 
 <mapper namespace="com.bit203.vinoweknow.dao.MagazineDAO">
     <insert id="createNews">
-        INSERT INTO WINENEWS (newsCode, newsTitle, newsWriter, newDate, newsStatus, newsViews, memberCode)
-        VALUES (#{newsCode}, #{newsTitle}, #{newsWriter}, #{newsDate}, #{newsStatus}, #{newsViews}, #{memberCode})
+        INSERT INTO WINENEWS (newsCode, newsTitle, newsCont, newsWriter, newsDate,<!-- newsStatus,--> newsViews<!--, memberCode-->)
+        VALUES (#{newsCode}, #{newsTitle}, #{newsCont}, admin, sysdate,<!-- #{newsStatus},--> 0<!--, #{memberCode}-->)
 
     </insert>
 
     <insert id="createKnow">
-        INSERT INTO WINEKNOW (knowCode, knowTitle, knowWriter, knowDate, knowStatus, knowViews, memberCode)
-        VALUES (#{knowCode}, #{knowTitle}, #{knowWriter}, #{knowDate}, #{knowStatus}, #{knowViews}, #{memberCode}s)
+        INSERT INTO WINEKNOW (knowCode, knowTitle, knowCont, knowWriter, knowDate, knowStatus, knowViews, memberCode)
+        VALUES (#{knowCode}, #{knowTitle}, #{knowCont}, #{knowWriter}, #{knowDate}, #{knowStatus}, #{knowViews}, #{memberCode})
 
     </insert>
 

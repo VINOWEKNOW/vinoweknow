@@ -1,15 +1,12 @@
-package com.bit203.vinoweknow.dao;
+package com.bit203.vinoweknow.service;
 
 import com.bit203.vinoweknow.vo.KnowVO;
 import com.bit203.vinoweknow.vo.NewsVO;
 import com.bit203.vinoweknow.vo.VoteVO;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-@Mapper
-public interface MagazineDAO {
-
+public interface MagazineService {
     //뉴스 리스트
     List<NewsVO> listNews();
 
@@ -39,7 +36,7 @@ public interface MagazineDAO {
 
     //상식 삭제
     void deleteKnow(KnowVO knowVO);
-    
+
     //투표 리스트
     List<VoteVO> listVote();
 
@@ -54,7 +51,4 @@ public interface MagazineDAO {
 
     //투표 삭제
     void deleteVote(VoteVO voteVO);
-
 }
-
-

@@ -6,8 +6,21 @@
 </head>
 <body>
 <h2>Write News</h2>
-<span th:text="${newsTitle}">제목입니다</span>
-<span th:text="${newsCont}">내용입니다</span>
-<span th:text="${newsWriter}">작성자입니다</span>
+<div class="container">
+    <form id="frm" name="frm" method="post" action="/magazine/insertnews">
+        <table class="news_detail">
+            <tr>
+                <td>제목</td>
+                <td><input type="text" id="newsTitle" name="newsTitle"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea id="newsCont" name="newsCont"></textarea>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" id="submit" value="저장" class="btn">
+    </form>
+</div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 package com.bit203.vinoweknow.controller;
 
-import com.bit203.vinoweknow.dao.MagazineDAO;
+import com.bit203.vinoweknow.service.MagazineService;
 import com.bit203.vinoweknow.vo.KnowVO;
 import com.bit203.vinoweknow.vo.NewsVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,41 +11,59 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/mg")
+@RequestMapping("/magazine")
 public class MagazineController {
 
     @Autowired
-    private MagazineDAO magazineDAO;
+    private MagazineService magazineService;
 
-
-
-    @RequestMapping("/newsview")
-    public String newsView(Model model) {
-        List<NewsVO> newsVOList = magazineDAO.listNews();
+    @RequestMapping("/listnews")
+    public String listNews(Model model) {
+        List<NewsVO> newsVOList = magazineService.listNews();
         System.out.print(newsVOList);
         model.addAttribute("newsVOList", newsVOList);
-        return "magazine/newsView";
+        return "magazine/listNews";
 
     }
 
-    @RequestMapping("/createnews")
-    public String createNews(Model model) {
-        String newsTitle = "제목";
-        String newsCont = "내용";
-        String newsWriter = "홍길동";
+//    @RequestMapping("/createnews")
+//    public String createNews(@RequestParam(value="newsCode") int newsCode, Model model) {
+//        String newsTitle = "제목";
+//        String newsCont = "내용";
+//        String newsWriter = "홍길동";
+//
+//        model.addAttribute("newsTitle", newsTitle);
+//        model.addAttribute("newsCont", newsCont);
+//        model.addAttribute("newsWriter", newsWriter);
+//        return "magazine/createNews";
+//    }
 
-        model.addAttribute("newsTitle", newsTitle);
-        model.addAttribute("newsCont", newsCont);
-        model.addAttribute("newsWriter", newsWriter);
+    @RequestMapping("/createnews")
+    public String createNews() {
         return "magazine/createNews";
     }
 
-    @RequestMapping("/knowview")
-    public String knowView(Model model) {
-        List<KnowVO> knowVOList = magazineDAO.listKnow();
+    @RequestMapping("/insertnews")
+    public String insertNews(NewsVO newsVO) {
+        magazineService.createNews(newsVO);
+        return "redirect:magazine/listnews";
+    }
+
+    @RequestMapping("/readnews")
+    public String readNews(){
+        return "magazine/readNews";
+    }
+
+    public String updateNews(){
+        return "magazine/updateNews";
+    }
+
+    @RequestMapping("/listknow")
+    public String listKnow(Model model) {
+        List<KnowVO> knowVOList = magazineService.listKnow();
         System.out.print(knowVOList);
         model.addAttribute("knowVOList", knowVOList);
-        return "magazine/knowView";
+        return "magazine/listKnow";
 
     }
 

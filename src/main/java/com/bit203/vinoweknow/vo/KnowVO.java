@@ -3,7 +3,7 @@ package com.bit203.vinoweknow.vo;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
 @Component
@@ -15,7 +15,7 @@ public class KnowVO {
     private String knowTitle;
     private String knowCont;
     private String knowWriter;
-    private Date knowDate;
+    private LocalDateTime knowDate;
     private char knowStatus;
     private int knowViews;
 
