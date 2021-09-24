@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions</title>
+</head>
+<body>
+
+<b2>Hello Questions~~</b2>
+
+<table id="questionsViewTable">
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Title</th>
+        <th>Writer</th>
+        <th>Types</th>
+        <th>OrderCode</th>
+        <th>Email</th>
+        <th>TelePhone</th>
+        <th>ReceiveCheck</th>
+        <th>Content</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="questions : ${questionsVOList}">
+        <td th:text="${questions.quesCode}">code</td>
+        <td th:text="${questions.quesTitle}">name</td>
+        <td th:text="${questions.quesWriter}">stat</td>
+        <td th:text="${questions.quesType}">view</td>
+        <td th:text="${questions.orderCode}">writer</td>
+        <td th:text="${questions.email}">date</td>
+        <td th:text="${questions.telephone}">date</td>
+        <td th:text="${questions.receiveCheck}">date</td>
+        <td th:text="${questions.quesContent}">date</td>
+        <td th:text="${questions.quesDate}">date</td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 package com.bit203.vinoweknow.dao;
 
 import com.bit203.vinoweknow.vo.BoardVO;
+import com.bit203.vinoweknow.vo.ContentsVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -10,17 +11,26 @@ public interface BoardDAO {
 
     List<BoardVO> listBoard();
 
-//    @Select("select boardCode, boardName, boardWriter, boardDate, boardView, boardState from board")
-
-//    public List<BoardVO> selectBoardList();
-
     void insertBoard(BoardVO boardVO);
 
-//    void selectBoard(BoardVO board);
-
-//    public int update(BoardVO board);
-
     void delBoard(BoardVO boardVO);
+
+    void createBoard(BoardVO boardVO);
+
+
+    List<ContentsVO> listContents();
+
+    void createCont(ContentsVO contentsVO);
+
+    ContentsVO selectCont(ContentsVO contentsVO);
+
+
+
+
+
+
+
+
 
 
 

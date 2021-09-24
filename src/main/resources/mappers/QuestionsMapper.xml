@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bit203.vinoweknow.dao.QuestionsDAO">
+
+    <select id="listQuestions" resultType="QuestionsVO">
+        select * from Questions
+    </select>
+
+
+    <insert id="createQuestions">
+        INSERT INTO Questions
+        VALUES (#{quesCode}, #{quesTitle}, #{quesWriter}, #{quesType}, #{orderCode}, #{email}, #{telephone}, #{receiveCheck}, #{quesContent}, #{quesDate})
+    </insert>
+
+
+    <delete id="delQuestions" parameterType="QuestionsVO">
+        delete
+        from Questions
+        where quesCode = #{quesCode}
+    </delete>
+
+</mapper>

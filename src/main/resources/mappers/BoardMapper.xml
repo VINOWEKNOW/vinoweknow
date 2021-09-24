@@ -7,26 +7,32 @@
         select * from Board
     </select>
 
-   <!-- <select id="selectBoardList" parameterType="BoardVO" resultType="BoardVO">
-        select *
-        from BOARD
-        where boardCode = #{boardCode}
-    </select>-->
 
-    <insert id="insertBoard" parameterType="BoardVO">
-        INSERT INTO BOARD
+    <insert id="createBoard">
+        INSERT INTO BOARD(boardCode, boardName, boardWriter, boardDate, boardView, boardState)
         VALUES (#{boardCode}, #{boardName}, #{boardWriter}, #{boardDate}, #{boardView}, #{boardState})
     </insert>
 
-    <!--<select id="selectBoardList" parameterType="BoardVO" resultType="BoardVO">
-        select *
-        from BOARD
-    </select>-->
 
     <delete id="delBoard" parameterType="BoardVO">
         delete
         from BOARD
         where boardCode = #{boardCode}
     </delete>
+
+
+    <select id="listContents" resultType="ContentsVO">
+        select contCode, boardCode, contTitle, contWriter, contContent, to_char(contDate, 'yyyymmdd') as contDate, contUpDate, contViews
+        from Contents
+    </select>
+
+    <insert id="createCont" parameterType="ContentsVO">
+        INSERT INTO CONTENTS(contCode, boardCode, contTitle, contWriter, contContent, contDate, contUpDate, contViews)
+        VALUES (USER_SEQ.NEXTVAL , 1, #{contTitle}, #{contWriter}, #{contContent}, SYSDATE,  SYSDATE, #{contViews})
+    </insert>
+
+    <select id="selectCont" resultType="ContentsVO">
+        select * from Contents
+    </select>
 
 </mapper>

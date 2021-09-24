@@ -32,5 +32,36 @@
 </table>
 
 
+
+<table id="contentsViewTable">
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Title</th>
+        <th>Writer</th>
+        <th>Types</th>
+        <th>OrderCode</th>
+        <th>Email</th>
+        <th>TelePhone</th>
+        <th>ReceiveCheck</th>
+        <th>Content</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="contents : ${contentsVOList}">
+        <td th:text="${contents.contCode}">code</td>
+        <td th:text="${contents.boardCode}">name</td>
+        <td th:text="${contents.contTitle}">stat</td>
+        <td th:text="${contents.contWriter}">view</td>
+        <td th:text="${contents.contContent}">writer</td>
+        <td th:text="${contents.contDate}">date</td>
+        <td th:text="${contents.contUpDate}">date</td>
+        <td th:text="${contents.contViews}">date</td>
+    </tr>
+    </tbody>
+</table>
+
+
 </body>
 </html>
