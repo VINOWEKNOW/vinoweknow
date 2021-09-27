@@ -20,7 +20,6 @@ public class MagazineController {
     @RequestMapping("/listnews")
     public String listNews(Model model) {
         List<NewsVO> newsVOList = magazineService.listNews();
-        System.out.print(newsVOList);
         model.addAttribute("newsVOList", newsVOList);
         return "magazine/listNews";
 

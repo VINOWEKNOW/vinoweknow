@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.bit203.vinoweknow.dao.MagazineDAO">
-    <insert id="createNews">
+    <insert id="insertNews">
         INSERT INTO WINENEWS (newsCode, newsTitle, newsCont, newsWriter, newsDate,<!-- newsStatus,--> newsViews<!--, memberCode-->)
         VALUES (#{newsCode}, #{newsTitle}, #{newsCont}, admin, sysdate,<!-- #{newsStatus},--> 0<!--, #{memberCode}-->)
 

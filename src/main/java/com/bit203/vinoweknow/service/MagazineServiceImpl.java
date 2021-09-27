@@ -26,6 +26,11 @@ public class MagazineServiceImpl implements MagazineService {
     }
 
     @Override
+    public void insertNews(NewsVO newsVO) {
+
+    }
+
+    @Override
     public void updateNews(NewsVO newsVO) {
 
     }

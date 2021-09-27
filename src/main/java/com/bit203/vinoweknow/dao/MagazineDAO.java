@@ -16,6 +16,9 @@ public interface MagazineDAO {
     //뉴스 생성
     void createNews(NewsVO newsVO);
 
+    //뉴스 작성
+    void insertNews(NewsVO newsVO);
+
     //뉴스 수정
     void updateNews(NewsVO newsVO);
 
